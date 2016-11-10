@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Word:</strong>
+  <%= @anwser.word_id %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @anwser.content %>
+</p>
+
+<p>
+  <strong>Correct:</strong>
+  <%= @anwser.correct %>
+</p>
+
+<%= link_to 'Edit', edit_anwser_path(@anwser) %> |
+<%= link_to 'Back', anwsers_path %>

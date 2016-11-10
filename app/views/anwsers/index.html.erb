@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Anwsers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Word</th>
+      <th>Content</th>
+      <th>Correct</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @anwsers.each do |anwser| %>
+      <tr>
+        <td><%= anwser.word_id %></td>
+        <td><%= anwser.content %></td>
+        <td><%= anwser.correct %></td>
+        <td><%= link_to 'Show', anwser %></td>
+        <td><%= link_to 'Edit', edit_anwser_path(anwser) %></td>
+        <td><%= link_to 'Destroy', anwser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Anwser', new_anwser_path %>

@@ -1,0 +1,32 @@
+<%= form_for(anwser) do |f| %>
+  <% if anwser.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(anwser.errors.count, "error") %> prohibited this anwser from being saved:</h2>
+
+      <ul>
+      <% anwser.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :word_id %>
+    <%= f.number_field :word_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= f.label :correct %>
+    <%= f.check_box :correct %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
